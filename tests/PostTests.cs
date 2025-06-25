@@ -76,13 +76,13 @@ public class PostTests
     public void GetEncodedLink_ReturnsUrlEncodedBlogLink()
     {
         // Arrange
-        var post = new Post { Slug = "test post with spaces" };
+        var post = new Post { Slug = "test-post-with-special-chars&symbols" };
         
         // Act
         var result = post.GetEncodedLink();
         
         // Assert
-        Assert.Contains("test%20post%20with%20spaces", result);
+        Assert.Contains("test-post-with-special-chars%26symbols", result);
     }
 
     [Fact]
