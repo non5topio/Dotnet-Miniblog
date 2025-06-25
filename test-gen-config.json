@@ -1,0 +1,27 @@
+{
+  "enabled": "true",
+  "increase-coverage": {
+    "project-name": "dotnet-miniblog",
+    "target-branches": [
+      "main",
+      "master"
+    ],
+    "test-env-docker-stage": "test",
+    "build-test-env-docker-stage-script-path": "build/build-test-env-docker-stage.sh",
+    "test-files-folders": [
+      "tests/PostTests.cs"
+    ],
+    "source-test-file-paths": [
+      {
+        "source-file-path": "src/Models/Post.cs",
+        "test-file-path": "tests/PostTests.cs"
+      }
+    ],
+    "test-command": "dotnet test",
+    "coverage-type": "cobertura",
+    "code-coverage-report-path": "tests/TestResults/coverage.cobertura.xml",
+    "desired-coverage": 85,
+    "max-iterations": 3,
+    "max-number-of-test-cases": 8
+  }
+}
