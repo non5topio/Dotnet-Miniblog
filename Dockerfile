@@ -20,4 +20,4 @@ RUN dotnet tool install -g dotnet-reportgenerator-globaltool
 ENV PATH="${PATH}:/root/.dotnet/tools"
 
 # Run tests with coverage
-CMD ["bash", "-c", "echo GLIBC VERSION && ldd --version && echo GLIBC VERSION CHECK && dotnet test --collect:'XPlat Code Coverage' --logger trx --results-directory ./tests/TestResults"]
+CMD ["bash", "-c", "echo GLIBC VERSION && ldd --version && echo GLIBC VERSION CHECK && dotnet test --collect:'XPlat Code Coverage' --results-directory ./tests/TestResults && find ./tests/TestResults -name 'coverage.cobertura.xml' -exec cp {} ./tests/TestResults/coverage.cobertura.xml \\;"]
