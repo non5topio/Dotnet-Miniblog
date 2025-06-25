@@ -34,7 +34,7 @@ TEST_ENV_DOCKER_STAGE="$(
 )"
 
 docker build \
-  --file Dockerfile.tests \
+  --file Dockerfile \
   --target "$TEST_ENV_DOCKER_STAGE" \
   --platform "$DOCKER_PLATFORM" \
   --tag "$PROJECT_NAME:$TEST_ENV_DOCKER_STAGE" \
