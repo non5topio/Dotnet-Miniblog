@@ -7,7 +7,7 @@
       "master"
     ],
     "test-env-docker-stage": "test",
-    "build-test-env-docker-stage-script-path": "build/build-test-env-docker-stage.sh",
+    "build-test-env-docker-stage-script-path": "tool/build-test-env-docker-stage.sh",
     "test-files-folders": [
       "tests/PostTests.cs"
     ],
