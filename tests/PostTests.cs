@@ -53,7 +53,7 @@ public class PostTests
         string? title = null;
         
         // Act
-        var result = Post.CreateSlug(title);
+        var result = Post.CreateSlug(title!);
         
         // Assert
         Assert.Equal(string.Empty, result);

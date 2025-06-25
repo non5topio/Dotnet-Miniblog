@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:9.0 AS test
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS test
 
 WORKDIR /app
 
@@ -20,4 +20,4 @@ RUN dotnet tool install -g dotnet-reportgenerator-globaltool
 ENV PATH="${PATH}:/root/.dotnet/tools"
 
 # Run tests with coverage
-CMD ["bash", "-c", "echo GLIBC VERSION && ldd --version && echo GLIBC VERSION CHECK && dotnet test --collect:'XPlat Code Coverage' --logger trx --results-directory ./TestResults"]
+CMD ["bash", "-c", "echo GLIBC VERSION && ldd --version && echo GLIBC VERSION CHECK && dotnet test --collect:'XPlat Code Coverage' --logger trx --results-directory ./tests/TestResults"]
